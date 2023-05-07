@@ -1,0 +1,22 @@
+# LEC 74
+We want to manage a Single template folder which will conatins templates of all APPS
+1. So, create a "templates" dir at iCoder(that conatins manage.py) create a specific dir for particular APP in APPS
+2. Make a important change in settings.py of iCoder that at line 59 make 'DIRS': [], to 'DIRS': ['templates'],
+i.e. make deafault dir to templates dir
+
+
+# 76 nothing77
+
+#78 Post Req - after submitting the form we refer it to /conatct/ so that it inkoves the views.conatct func() 
+and a model is created inside the func and the func again render it to contact.html
+IF WE DON'T REFER IT TO "/CONTACT/" (for e.g. change it to '/about/') THEN IT WILL NOT ABLE TO CREATE A MODEL OF 'CONTACT'.. SO NO ENTERY WILL BE REFLECTED IN D.B.
+
+
+#83 'icontains' is an imp query used in django
+
+
+# TO EDIT THE ADMIN PANEL 
+* GO TO URLS.PY OF APP
+admin.site.site_header="iCoder Admin"
+admin.site.site_title="iCoder Admin Panel"
+admin.site.index_title="Welcome to iCoder Admin Panel"
