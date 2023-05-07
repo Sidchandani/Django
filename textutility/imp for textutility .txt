@@ -1,0 +1,25 @@
+//TO RENDER A HTML PAGE
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
+    
+// TO REDIRECT TO A path in HTML
+from django.shortcuts import redirect
+
+def index(request):
+    return redirect('/index')
+
+// ONLY 'views.func_name' MATTERS   
+    #urls.py
+    urlpatterns = [
+        path('removepunc', views.removepunc, name='rempun'),
+        path('capitalizefirst', views.capfirst, name='capfirst'),
+    ]
+    #view.py    
+    def removepunc(request):
+        return HttpResponse("remove punc")
+
+    def capfirst(request):
+        return HttpResponse("capitalize first")
+
