@@ -1,0 +1,41 @@
+ "python -m django startproject mac" TO START A NEW PROJECT
+ "python manage.py startapp shop " To Create a app inside a project 
+#nothing@77
+
+ Lec -24
+    //MODELS MIGRATE MAKEMIGRATION..
+
+        #TO STORE THE CHANGES MADE 
+        python manage.py makemigrations
+        #TO APPLY (THE CHANGES MADE) IN DATABASE
+        python manage.py migrate
+
+
+
+    //CHANGE 'shop' NAME TO 'shop.app.ShopConfig' in settings.py 
+        under the INSTALLED_APPS section after adding a product/Model
+    
+
+Lec-25
+    //Creating Superuser
+    python manage.py createsuperuser 
+    //NOW OPEN ADMIN.PY AND REG. PRODUCT
+    
+
+Lec-28
+    //settings.py
+        STATIC_URL
+        MEDIA_ROOT
+        MEDIA_URL
+    //urls.py
+        urlpatterns = [
+            ....
+        ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+
+
+#To Register A Model :
+1. Create Its Name & Fields in model.py
+2. Register Your model at admin.py
+3. RUN makemigrations, migrate
